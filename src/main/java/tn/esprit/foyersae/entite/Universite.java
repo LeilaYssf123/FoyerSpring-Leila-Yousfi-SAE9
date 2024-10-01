@@ -1,9 +1,6 @@
 package tn.esprit.foyersae.entite;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,4 +17,9 @@ public class Universite {
     private Long idUniversitaire;
     private String nomUniversitaire;
     private String adresse;
+
+
+    @OneToOne
+    private  Foyer f;
+
 }

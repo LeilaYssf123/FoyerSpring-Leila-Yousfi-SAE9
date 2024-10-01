@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Setter
@@ -22,6 +23,10 @@ public class Etudiant {
     private  Long cin;
     private String ecole ;
     private Date dateNaissance ;
+
+
+    @ManyToMany (mappedBy = "rsv")
+    List<Reservation> rsr;
 
 
 }
