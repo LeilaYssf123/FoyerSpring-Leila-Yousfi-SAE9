@@ -1,13 +1,12 @@
 package tn.esprit.foyersae.entite;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.List;
 
 @Entity
 @Setter
@@ -20,6 +19,15 @@ public class Foyer {
     private Long idFoyer;
     private String nomFoyer;
     private Long capaciteFoyer;
+
+    //
+    @OneToOne(mappedBy = "F")
+    private  Universite U;
+
+
+
+    @OneToMany(mappedBy = "F")
+     private List <Bloc> B;
 
 
 

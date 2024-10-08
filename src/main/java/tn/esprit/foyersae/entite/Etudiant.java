@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Setter
@@ -23,5 +24,9 @@ public class Etudiant {
     private String ecole ;
     private Date dateNaissance ;
 
+
+
+    @ManyToMany(mappedBy = "E")
+    private List<Reservation> R;
 
 }
