@@ -18,11 +18,11 @@ import java.util.List;
 
 public class Reservation {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private String idReservation ;
     private Date anneeUniversitaire ;
     private  boolean estValide;
 
+<<<<<<< HEAD
     //
 
     @ManyToOne
@@ -30,5 +30,10 @@ public class Reservation {
 
     @ManyToMany
     private List<Etudiant> E;
+=======
+    @ManyToMany
+    List<Etudiant> etd;
+
+>>>>>>> af93d5f8a65296dfac7e29b1e5a587499217a48c
 
 }

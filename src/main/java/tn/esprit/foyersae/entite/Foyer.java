@@ -6,7 +6,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+<<<<<<< HEAD
 import java.util.List;
+=======
+import java.util.Set;
+>>>>>>> af93d5f8a65296dfac7e29b1e5a587499217a48c
 
 @Entity
 @Setter
@@ -30,6 +34,11 @@ public class Foyer {
      private List <Bloc> B;
 
 
+  @OneToOne (mappedBy = "unv")
+    private  Universite un;
 
+  @OneToMany
+  Set<Bloc> b;
 
 }
+

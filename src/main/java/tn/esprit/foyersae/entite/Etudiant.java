@@ -25,8 +25,14 @@ public class Etudiant {
     private Date dateNaissance ;
 
 
+<<<<<<< HEAD
 
     @ManyToMany(mappedBy = "E")
     private List<Reservation> R;
+=======
+    @ManyToMany (mappedBy = "rsv")
+    List<Reservation> rsr;
+
+>>>>>>> af93d5f8a65296dfac7e29b1e5a587499217a48c
 
 }

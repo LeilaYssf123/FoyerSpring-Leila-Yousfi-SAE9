@@ -22,6 +22,7 @@ public class Bloc {
     private String nomBloc;
     private  Long capaciteBloc;
 
+<<<<<<< HEAD
 
 
 
@@ -31,6 +32,14 @@ public class Bloc {
 
     @OneToMany()
     private List<Chambre> CH;
+=======
+
+    @ManyToOne
+    private  Foyer f;
+
+@OneToMany
+    List<Chambre>c;
+>>>>>>> af93d5f8a65296dfac7e29b1e5a587499217a48c
 
 
 }
